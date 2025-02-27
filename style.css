@@ -37,6 +37,29 @@ body {
   height: auto; /* Maintain aspect ratio */
 }
 
+/* General Reset for logo */
+.logo img {
+    width: 100%;          /* Logo scales based on container size */
+    max-width: 200px;     /* Max size to prevent it from becoming too large */
+    height: auto;         /* Maintain aspect ratio */
+    transition: width 0.3s ease; /* Smooth transition when resizing */
+}
+
+@media (max-width: 768px) {
+    /* For smaller screens, we make the logo smaller */
+    .logo img {
+        max-width: 150px;  /* Resize the logo */
+    }
+}
+
+@media (max-width: 480px) {
+    /* For very small screens, we further reduce the size */
+    .logo img {
+        max-width: 100px;
+    }
+}
+
+
 .main-nav {
   position: absolute;
   top: 1.5rem;
