@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTF Challenge Tips and Tools</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #444;
+        }
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .tab-button {
+            padding: 10px 20px;
+            margin: 0 5px;
+            background: #ddd;
+            border: none;
+            border-radius: 5px 5px 0 0;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s ease;
+        }
+        .tab-button.active {
+            background: #007bff;
+            color: #fff;
+        }
+        .tab-content {
+            display: none;
+            padding: 20px;
+            border-top: 2px solid #007bff;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h2 {
+            color: #007bff;
+            margin-top: 0;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CTF Challenge Tips and Tools</h1>
+        <div class="tabs">
+            <button class="tab-button active" onclick="openTab(event, 'hashes')">Hashes</button>
+            <button class="tab-button" onclick="openTab(event, 'ciphers')">Ciphers</button>
+            <button class="tab-button" onclick="openTab(event, 'file-formats')">File Formats</button>
+            <button class="tab-button" onclick="openTab(event, 'web-challenges')">Web Challenges</button>
+            <button class="tab-button" onclick="openTab(event, 'tools')">Tools</button>
+            <button class="tab-button" onclick="openTab(event, 'tips')">Tips</button>
+        </div>
+
+        <div id="hashes" class="tab-content active">
+            <h2>Common Hashes</h2>
+            <ul>
+                <li>MD5</li>
+                <li>SHA-1</li>
+                <li>SHA-256</li>
+                <li>SHA-512</li>
+                <li>SHA-3</li>
+                <li>BLAKE2</li>
+                <li>RIPEMD-160</li>
+                <li>HMAC (Hash-based Message Authentication Code)</li>
+            </ul>
+            <h2>Weak Hashes</h2>
+            <ul>
+                <li>MD5</li>
+                <li>SHA-1</li>
+                <li>CRC32</li>
+                <li>HAVAL</li>
+                <li>Tiger</li>
+                <li>FNV-1 (Fowler–Noll–Vo)</li>
+                <li>Snefru</li>
+            </ul>
+        </div>
+
+        <div id="ciphers" class="tab-content">
+            <h2>Common Ciphers</h2>
+            <ul>
+                <li>AES (Advanced Encryption Standard)</li>
+                <li>DES (Data Encryption Standard)</li>
+                <li>3DES (Triple DES)</li>
+                <li>RSA (Rivest–Shamir–Adleman)</li>
+                <li>EC (Elliptic Curve Cryptography)</li>
+                <li>ChaCha20</li>
+                <li>Blowfish</li>
+                <li>Twofish</li>
+                <li>RC4 (Rivest Cipher 4)</li>
+                <li>Camellia</li>
+                <li>Serpent</li>
+            </ul>
+            <h2>Weak Ciphers</h2>
+            <ul>
+                <li>RC4</li>
+                <li>DES (Data Encryption Standard)</li>
+                <li>3DES (Triple DES)</li>
+                <li>MD5 (used as a cipher in certain protocols)</li>
+                <li>AES-128 (in some contexts, vulnerable to brute-forcing)</li>
+                <li>SSL v2/v3 (Outdated, with RC4 usage)</li>
+                <li>WEP (Wired Equivalent Privacy)</li>
+            </ul>
+        </div>
+
+        <div id="file-formats" class="tab-content">
+            <h2>File Formats & Their Secrets</h2>
+            <h3>Excel Files (.xls, .xlsx):</h3>
+            <p><strong>Hint:</strong> Excel files are actually <strong>zip archives</strong>.</p>
+            <p><strong>Action:</strong> Rename <code>.xls</code> or <code>.xlsx</code> to <code>.zip</code>, then unzip to inspect the contents.</p>
+            <ul>
+                <li>Inside you might find XML files, macros, or hidden data.</li>
+            </ul>
+            <h3>Word Files (.docx, .docm):</h3>
+            <p><strong>Hint:</strong> These are also zip archives (like Excel files).</p>
+            <p><strong>Action:</strong> Rename <code>.docx</code> or <code>.docm</code> to <code>.zip</code> and extract it to find embedded content, such as macros, XML files, and other hidden data.</p>
+            <h3>PDF Files (.pdf):</h3>
+            <p><strong>Hint:</strong> PDFs can sometimes contain hidden data in embedded forms, objects, or scripts.</p>
+            <p><strong>Action:</strong> Look for embedded JavaScript or use tools like <strong>pdfid.py</strong> to analyze them for hidden features.</p>
+            <h3>Zip Files (.zip):</h3>
+            <p><strong>Hint:</strong> Zip files may contain <strong>password-protected</strong> content or encrypted files.</p>
+            <p><strong>Action:</strong> Use <strong>John the Ripper</strong> or <strong>fcrackzip</strong> to crack passwords. Consider brute-force or dictionary attacks.</p>
+            <h3>Image Files (.jpg, .png, .gif):</h3>
+            <p><strong>Hint:</strong> Images can hide data through <strong>steganography</strong>.</p>
+            <p><strong>Action:</strong> Check for hidden data using <strong>zsteg</strong> (for PNG), <strong>stegsolve</strong>, or <strong>binwalk</strong> for potential steganographic data.</p>
+        </div>
+
+        <div id="web-challenges" class="tab-content">
+            <h2>Web Challenges & Files to Check</h2>
+            <h3>robots.txt:</h3>
+            <p><strong>Hint:</strong> The <strong>robots.txt</strong> file can contain hints or even URLs to hidden parts of the website.</p>
+            <p><strong>Action:</strong> Always check <code>http://&lt;target_website&gt;/robots.txt</code> for any disallowed paths or other useful information.</p>
+            <h3>Hidden Directories/Files:</h3>
+            <p><strong>Hint:</strong> Websites often hide <strong>directories</strong> that are not linked on the page.</p>
+            <p><strong>Action:</strong> Use <strong>dirbuster</strong> or <strong>gobuster</strong> to brute-force potential directories and find hidden paths.</p>
+            <h3>Source Code:</h3>
+            <p><strong>Hint:</strong> Always <strong>view the page source</strong> or <strong>inspect elements</strong> for hidden comments, JavaScript, or URL parameters.</p>
+            <p><strong>Action:</strong> Look for clues in <strong>JavaScript files</strong> or <strong>hidden form fields</strong>. Sometimes flags or hints are hidden within source code comments.</p>
+        </div>
+
+        <div id="tools" class="tab-content">
+            <h2>Useful Tools to Keep in Mind</h2>
+            <h3>binwalk:</h3>
+            <p><strong>Hint:</strong> Use for extracting and analyzing embedded files in firmware images or binary files.</p>
+            <p><strong>Action:</strong> Run <code>binwalk &lt;filename&gt;</code> to look for embedded files or hidden data.</p>
+            <h3>strings:</h3>
+            <p><strong>Hint:</strong> Extract readable text from binary files.</p>
+            <p><strong>Action:</strong> Run <code>strings &lt;filename&gt;</code> to look for hidden strings in binaries.</p>
+            <h3>ffuf (Fuzz Faster U Fool):</h3>
+            <p><strong>Hint:</strong> It helps with brute-forcing directories and files on a web server.</p>
+            <p><strong>Action:</strong> Use it to discover hidden resources like <code>/admin</code>, <code>/backup</code>, etc.</p>
+            <h3>curl:</h3>
+            <p><strong>Hint:</strong> Use <strong>curl</strong> to interact with web services or test HTTP requests.</p>
+            <p><strong>Action:</strong> Use <code>curl -v &lt;URL&gt;</code> to inspect headers or <code>curl -X POST -d "data=value" &lt;URL&gt;</code> for testing endpoints.</p>
+        </div>
+
+        <div id="tips" class="tab-content">
+            <h2>Miscellaneous Tips</h2>
+            <h3>Always Check for Hidden Files:</h3>
+            <p>Files starting with a <strong>dot</strong> (e.g., <code>.hiddenfile</code>) are typically hidden in Unix-like systems.</p>
+            <p><strong>Action:</strong> Use <code>ls -la</code> or <code>find . -name '.*'</code> to uncover them.</p>
+            <h3>Check for Metadata:</h3>
+            <p><strong>Hint:</strong> Files like images or documents may contain hidden <strong>metadata</strong> that can provide clues.</p>
+            <p><strong>Action:</strong> Use tools like <strong>exiftool</strong> to view metadata of images, PDFs, and documents.</p>
+            <h3>Use Online Hash Cracking:</h3>
+            <p>If you're stuck on cracking hashes, check services like <strong>CrackStation</strong>, <strong>HashKiller</strong>, or <strong>OnlineHashCrack</strong> for fast hash lookups.</p>
+            <h3>General Strategies for CTF Challenges:</h3>
+            <ul>
+                <li><strong>Don't Hesitate to Google:</strong> It’s not cheating! If you see a name, term, or acronym that you don't recognize, quickly look it up.</li>
+                <li><strong>Break Down the Problem:</strong> Focus on the basics first: Are there hidden files? Are there password-protected files? What tools should I use to extract data?</li>
+                <li><strong>Collaborate:</strong> If you're in a team, don’t hesitate to <strong>split tasks</strong> based on expertise.</li>
+                <li><strong>Documentation:</strong> Always document your findings during a CTF! This way, you’ll avoid going in circles when trying to find the next flag.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            // Hide all tab content
+            var tabContents = document.getElementsByClassName("tab-content");
+            for (var i = 0; i < tabContents.length; i++) {
+                tabContents[i].style.display = "none";
+            }
+
+            // Remove the "active" class from all tab buttons
+            var tabButtons = document.getElementsByClassName("tab-button");
+            for (var i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].className = tabButtons[i].className.replace(" active", "");
+            }
+
+            // Show the current tab content and mark the button as active
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>

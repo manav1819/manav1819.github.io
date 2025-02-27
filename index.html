@@ -1,29 +1,67 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>
-            Manav Patel
-        </title>
-        <style>
-            div{
-                border: 1px solid black;
-                border-radius: 15px;
-                height: 30px;
-                width:auto;
-                background-color: aqua;
-                padding: 10px;
-                margin: 50px;
-            }
-        </style>
-    </head>
-    <body>
-        <div>
-            This Website is still in development. Please Visit back another time!!
-        </div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-        <div>
-            <a href="CTFcheetsheet.md">View My CTF Cheat Sheet</a>
-        </div>
-        
-    </body>
+  <!-- Header Section -->
+  <header class="hero">
+    <div class="logo">
+      <span>Your Logo</span> <!-- Replace "Your Logo" with an actual logo or initials if needed -->
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+    <div class="hero-content">
+      <h1>Hello, I'm [Your Name].<br>I'm a [Your Role].</h1>
+      <p>I have [X years] experience in [Your Field], having worked with [Companies/Projects].<br>
+        I value qualities such as <strong>clarity</strong>, <strong>empathy</strong>, and <strong>integrity</strong>, which guide my approach to problem-solving and life in general.</p>
+    </div>
+  </header>
+
+  <!-- Remaining Sections -->
+  <section id="about" class="fade-in">
+    <h2>About Me</h2>
+    <p>Write a concise introduction that reflects your experience, passion, and unique qualities.</p>
+  </section>
+
+  <section id="skills" class="fade-in">
+    <h2>Skills</h2>
+    <div class="skill">
+      <p>Cybersecurity</p>
+      <div class="progress">
+        <div class="progress-bar" style="width: 0%;" data-width="80%"></div>
+      </div>
+    </div>
+    <div class="skill">
+      <p>Programming</p>
+      <div class="progress">
+        <div class="progress-bar" style="width: 0%;" data-width="70%"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="fade-in">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Project Name</h3>
+      <p>Brief description of the project and its purpose.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="fade-in">
+    <h2>Contact</h2>
+    <p>Let's connect! Reach out via <a href="mailto:your-email@example.com">Email</a> or find me on <a href="https://www.linkedin.com/in/yourprofile">LinkedIn</a>.</p>
+  </section>
+
+  <script src="script.js"></script>
+
+</body>
 </html>
