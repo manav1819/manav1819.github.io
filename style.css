@@ -1,128 +1,139 @@
 /* General Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    color: #EAEAEA; /* Ivory for standard text */
-    background-color: #1A1A2E; /* Dark navy */
-    text-align: center;
-    line-height: 1.6;
-  }
-  
-  /* Hero Header */
-  .hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 4rem 2rem;
-    text-align: left;
-    background: linear-gradient(45deg, #1A1A2E, #222831); /* Dark navy to charcoal */
-    color: #EAEAEA; /* Ivory text */
-    min-height: 100vh;
-    position: relative;
-  }
-  
-  .logo {
-    position: absolute;
-    top: 1.5rem;
-    left: 2rem;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #FFD700; /* Gold for logo */
-  }
-  
-  .main-nav {
-    position: absolute;
-    top: 1.5rem;
-    right: 2rem;
-  }
-  
-  .main-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-  }
-  
-  .main-nav a {
-    color: #FFD700; /* Gold for links */
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-  }
-  
-  .main-nav a:hover {
-    color: #C0A36E; /* Darker gold on hover */
-  }
-  
-  .hero-content {
-    max-width: 600px;
-    margin-top: 100px;
-    text-align: left;
-  }
-  
-  .hero h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    line-height: 1.2;
-    color: #FFF; /* White for main heading */
-  }
-  
-  .hero p {
-    margin-top: 1rem;
-    font-size: 1.2rem;
-    color: #D3D3D3; /* Light grey for secondary text */
-  }
-  
-  /* Sections */
-  section {
-    padding: 2rem;
-  }
-  
-  /* Fade-in effect */
-  .fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-  }
-  
-  .fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  /* Progress Bars */
-  .skill {
-    margin: 1rem 0;
-  }
-  
-  .progress {
-    background: #444; /* Dark background for progress bar */
-    border-radius: 5px;
-    overflow: hidden;
-    height: 8px;
-    margin: 0.5rem 0;
-  }
-  
-  .progress-bar {
-    height: 100%;
-    background-color: #FFD700; /* Gold color for progress fill */
-    width: 0;
-    transition: width 1.2s ease;
-  }
-  
-  /* Projects */
-  .project {
-    margin: 1.5rem 0;
-  }
-  
-  /* Contact */
-  #contact a {
-    color: #FFD700;
-    text-decoration: none;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #EAEAEA; /* Ivory for standard text */
+  background-color: #1A1A2E; /* Dark navy */
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* Hero Header */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 2rem;
+  text-align: left;
+  background: linear-gradient(45deg, #1A1A2E, #222831); /* Dark navy to charcoal */
+  color: #EAEAEA; /* Ivory text */
+  min-height: 100vh;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  top: 1.5rem;
+  left: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #FFD700; /* Gold for logo */
+  width: 150px; /* Adjust the size as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.main-nav {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.main-nav a {
+  color: #FFD700; /* Gold for links */
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: #C0A36E; /* Darker gold on hover */
+}
+
+.hero-content {
+  max-width: 600px;
+  margin-top: 100px;
+  text-align: left;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.2;
+  color: #FFF; /* White for main heading */
+}
+
+.hero p {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #D3D3D3; /* Light grey for secondary text */
+}
+
+/* Sections */
+section {
+  padding: 2rem;
+  background-color: #222831; /* Charcoal background for sections */
+  border-radius: 8px; /* Slightly rounded corners */
+}
+
+/* Fade-in effect */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Progress Bars */
+.skill {
+  margin: 1rem 0;
+}
+
+.progress {
+  background: #444; /* Dark background for progress bar */
+  border-radius: 5px;
+  overflow: hidden;
+  height: 8px;
+  margin: 0.5rem 0;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #FFD700; /* Gold color for progress fill */
+  width: 0;
+  transition: width 1.2s ease;
+}
+
+/* Projects */
+.project {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background-color: #222831; /* Charcoal background for project sections */
+  border-radius: 8px;
+}
+
+/* Contact */
+#contact a {
+  color: #FFD700;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#contact a:hover {
+  color: #C0A36E; /* Darker gold on hover */
+}
