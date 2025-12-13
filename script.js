@@ -1,10 +1,15 @@
-// Smooth Scrolling
+// Smooth Scrolling with offset for fixed header
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        const offsetTop = target.offsetTop - 20;
+        window.scrollTo({
+          top: offsetTop,
+          behavior: 'smooth'
+        });
+      }
     });
   });
   
@@ -26,29 +31,58 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     appearOnScroll.observe(fader);
   });
   
-  // Responsive Menu
+  // Responsive Menu (if elements exist)
   const menuToggle = document.getElementById('menu-toggle');
   const navLinks = document.getElementById('nav-links');
-  menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-  });
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  }
   
   // Animate Progress Bars
   const progressBars = document.querySelectorAll('.progress-bar');
   function animateProgressBar() {
     progressBars.forEach(bar => {
       const width = bar.getAttribute('data-width');
-      bar.style.width = width;
+      setTimeout(() => {
+        bar.style.width = width;
+      }, 100);
     });
   }
+
   const skillsSection = document.getElementById('skills');
-  const skillsObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        animateProgressBar();
-        skillsObserver.unobserve(skillsSection);
-      }
-    });
-  }, { threshold: 0.5 });
-  skillsObserver.observe(skillsSection);
+  if (skillsSection) {
+    const skillsObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateProgressBar();
+          skillsObserver.unobserve(skillsSection);
+        }
+      });
+    }, { threshold: 0.3 });
+    skillsObserver.observe(skillsSection);
+  }
+
+  // Add subtle parallax effect to hero section
+  window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const hero = document.querySelector('.hero');
+    if (hero) {
+      hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+    }
+  });
+
+  // Add cursor glow effect
+  document.addEventListener('mousemove', (e) => {
+    const glow = document.createElement('div');
+    glow.className = 'cursor-glow';
+    glow.style.left = e.pageX + 'px';
+    glow.style.top = e.pageY + 'px';
+    document.body.appendChild(glow);
+
+    setTimeout(() => {
+      glow.remove();
+    }, 500);
+  });
   
