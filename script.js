@@ -4,11 +4,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     e.preventDefault();
     const target = document.querySelector(this.getAttribute('href'));
     if (target) {
-      const offsetTop = target.offsetTop - 20;
+      const offsetTop = target.getBoundingClientRect().top + window.pageYOffset - 80;
       window.scrollTo({
         top: offsetTop,
         behavior: 'smooth'
       });
+    }
+    // Close mobile menu after a link is clicked
+    const navLinks = document.getElementById('nav-links');
+    if (navLinks) {
+      navLinks.classList.remove('show');
     }
   });
 });
@@ -16,8 +21,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Scroll Animation
 const faders = document.querySelectorAll('.fade-in');
 const appearOptions = {
-  threshold: 0,
-  rootMargin: "0px 0px -100px 0px"
+  threshold: 0.1,
+  rootMargin: "0px 0px -60px 0px"
 };
 const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
   entries.forEach(entry => {
@@ -31,7 +36,7 @@ faders.forEach(fader => {
   appearOnScroll.observe(fader);
 });
 
-// Responsive Menu (if elements exist)
+// Responsive menu toggle
 const menuToggle = document.getElementById('menu-toggle');
 const navLinks = document.getElementById('nav-links');
 if (menuToggle && navLinks) {
@@ -39,25 +44,3 @@ if (menuToggle && navLinks) {
     navLinks.classList.toggle('show');
   });
 }
-
-// Add subtle parallax effect to hero section
-window.addEventListener('scroll', () => {
-  const scrolled = window.pageYOffset;
-  const hero = document.querySelector('.hero');
-  if (hero) {
-    hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-  }
-});
-
-// Add cursor glow effect
-document.addEventListener('mousemove', (e) => {
-  const glow = document.createElement('div');
-  glow.className = 'cursor-glow';
-  glow.style.left = e.pageX + 'px';
-  glow.style.top = e.pageY + 'px';
-  document.body.appendChild(glow);
-
-  setTimeout(() => {
-    glow.remove();
-  }, 500);
-});
