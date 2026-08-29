@@ -3,99 +3,200 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Manav Patel - Cybersecurity Professional</title>
-  <meta name="description" content="Cybersecurity professional with 4+ years of experience specializing in penetration testing, threat analysis, and digital forensics.">
+  <title>Manav Patel — Cybersecurity Professional</title>
+  <meta name="description" content="Cybersecurity graduate from Sheridan College (Information Systems Security), focused on blue team detection engineering, security research, and continuous learning in an ever-evolving field.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Header Section -->
+  <!-- Top Navigation -->
+  <nav class="site-nav">
+    <a href="/" class="brand">Manav Patel</a>
+    <button class="nav-toggle" id="menu-toggle" aria-label="Toggle menu">☰</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#focus">Expertise</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#credentials">Credentials</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
   <header class="hero">
-    <div class="logo">
-      <a href="/">
-        <pre>┌──[MP]
-└──╼ $</pre>
-      </a>
-    </div>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
     <div class="hero-content">
-      <h1>Hello, I'm Manav.<br>I'm a Hacker.</h1>
-      <p>A cybersecurity professional with 4+ years of experience and a student at Sheridan College. I specialize in penetration testing, threat analysis, and digital forensics. My work is driven by <strong>clarity, empathy, and integrity</strong> —principles that guide both my approach to problems and life.</p>
+      <p class="eyebrow">Cybersecurity Professional</p>
+      <h1>Manav Patel</h1>
+      <p class="hero-subtitle">Blue Team &amp; Detection Engineering Focus</p>
+      <p class="hero-body">I'm a Sheridan College graduate in Information Systems Security, with hands-on experience spanning detection engineering, security research, and secure application development. I split my time between real-world security operations and applied research — because cybersecurity is a field that never stops moving, and I don't intend to stop learning it.</p>
+      <div class="quick-facts">
+        <span>Bachelor of Applied Information Sciences — Information Systems Security</span>
+        <span>IEEE Published Researcher</span>
+        <span>Capstone Project Lead</span>
+      </div>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+      </div>
     </div>
   </header>
 
-  <!-- About Section -->
-  <section id="about" class="fade-in">
-    <h2>About Me</h2>
-    <p>I'm a passionate cybersecurity professional with over 4 years of hands-on experience in securing digital infrastructures. Currently pursuing my studies at Sheridan College, I combine academic knowledge with real-world expertise in penetration testing, threat analysis, and digital forensics.</p>
-    <p style="margin-top: 1rem;">My approach is rooted in three core principles: <strong>clarity</strong> in communication, <strong>empathy</strong> for users and stakeholders, and unwavering <strong>integrity</strong> in every engagement. I believe that effective security goes beyond technical prowess—it requires understanding people, processes, and the bigger picture.</p>
-  </section>
+  <main>
+    <!-- About Section -->
+    <section id="about" class="fade-in">
+      <h2>About Me</h2>
+      <p>I hold a Bachelor of Applied Information Sciences in Information Systems Security from Sheridan College, where I led a four-person capstone team through the full delivery of a security-awareness platform — from architecture to production deployment. Alongside my studies, I've worked full-time in physical security at a data center site, which gave me a practical, ground-level understanding of access control, monitoring, and incident response long before I applied it in a SOC context.</p>
+      <p>My work spans both sides of the fence: defensive practices like detection engineering and threat modeling, and offensive fundamentals like exploit development and penetration testing, because understanding how systems are broken is what makes defending them meaningful. Cybersecurity is an ever-evolving field — new vulnerabilities, new frameworks, new attack surfaces — and I treat continuous learning as a core part of the job, not a phase that ends at graduation.</p>
+      <p>My approach is rooted in three principles: <strong>clarity</strong> in communication, <strong>empathy</strong> for the people security exists to protect, and unwavering <strong>integrity</strong> in every engagement.</p>
+    </section>
 
-  <section id="skills" class="fade-in">
-    <h2>Skills & Expertise</h2>
-    <div class="skill">
-      <p>Penetration Testing & Ethical Hacking</p>
-      <div class="progress">
-        <div class="progress-bar" style="width: 0%;" data-width="90%"></div>
+    <!-- Focus / Expertise Section -->
+    <section id="focus" class="fade-in">
+      <h2>Areas of Expertise</h2>
+      <div class="focus-grid">
+        <div class="focus-card">
+          <h3>Blue Team &amp; Detection</h3>
+          <div class="tags">
+            <span class="tag">SIEM &amp; log analysis (ELK, Wazuh)</span>
+            <span class="tag">Detection engineering &amp; Sigma rules</span>
+            <span class="tag">MITRE ATT&amp;CK / ATLAS mapping</span>
+            <span class="tag">STRIDE threat modeling</span>
+            <span class="tag">Incident response fundamentals</span>
+          </div>
+        </div>
+        <div class="focus-card">
+          <h3>Offensive Security</h3>
+          <div class="tags">
+            <span class="tag">Penetration testing</span>
+            <span class="tag">Exploit development (SEH, ROP, egghunters)</span>
+            <span class="tag">Binary &amp; network forensics</span>
+            <span class="tag">Applied cryptography</span>
+          </div>
+        </div>
+        <div class="focus-card">
+          <h3>Security Engineering &amp; ML</h3>
+          <div class="tags">
+            <span class="tag">Python (Flask, scikit-learn, DistilBERT)</span>
+            <span class="tag">Applied ML for security (phishing, malware, anomaly detection)</span>
+            <span class="tag">Cloud &amp; RBAC (Supabase, Next.js, Vercel)</span>
+            <span class="tag">Git / CI workflows</span>
+          </div>
+        </div>
+        <div class="focus-card">
+          <h3>Infrastructure &amp; Labs</h3>
+          <div class="tags">
+            <span class="tag">Proxmox virtualization</span>
+            <span class="tag">Raspberry Pi sensors</span>
+            <span class="tag">Honeypot / IDS builds</span>
+            <span class="tag">Linux administration</span>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="skill">
-      <p>Threat Analysis & Incident Response</p>
-      <div class="progress">
-        <div class="progress-bar" style="width: 0%;" data-width="85%"></div>
-      </div>
-    </div>
-    <div class="skill">
-      <p>Digital Forensics & Investigation</p>
-      <div class="progress">
-        <div class="progress-bar" style="width: 0%;" data-width="80%"></div>
-      </div>
-    </div>
-    <div class="skill">
-      <p>Security Architecture & Network Defense</p>
-      <div class="progress">
-        <div class="progress-bar" style="width: 0%;" data-width="85%"></div>
-      </div>
-    </div>
-    <div class="skill">
-      <p>Programming & Scripting (Python, Bash, PowerShell)</p>
-      <div class="progress">
-        <div class="progress-bar" style="width: 0%;" data-width="75%"></div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="projects" class="fade-in">
-    <h2>Featured Projects</h2>
-    <div class="project">
-      <h3>CTF Challenge Resource Hub</h3>
-      <p>Developed a comprehensive web-based resource for CTF (Capture The Flag) competitions, featuring categorized tips, tools, and techniques for various challenge types including cryptography, web exploitation, and forensics. <a href="CTF.html" style="color: #FFD700;">View Resource →</a></p>
-    </div>
-    <div class="project">
-      <h3>Vulnerability Assessment Framework</h3>
-      <p>Created an automated vulnerability scanning and reporting framework that identifies common security weaknesses in web applications, helping organizations prioritize remediation efforts effectively.</p>
-    </div>
-    <div class="project">
-      <h3>Incident Response Playbook</h3>
-      <p>Designed and implemented a comprehensive incident response playbook for rapid threat detection and mitigation, reducing average response time by 40% in simulated attack scenarios.</p>
-    </div>
-  </section>
+    <!-- Projects Section -->
+    <section id="projects" class="fade-in">
+      <h2>Featured Projects</h2>
 
-  <section id="contact" class="fade-in">
-    <h2>Let's Connect</h2>
-    <p>Interested in collaboration, consulting, or just want to discuss cybersecurity? I'd love to hear from you.</p>
-    <p style="margin-top: 1.5rem;">
-      <a href="mailto:pmanav910@proton.me">📧 Email Me</a> |
-      <a href="https://www.linkedin.com/in/manav-dpatel" target="_blank" rel="noopener noreferrer">💼 LinkedIn</a>
-    </p>
-  </section>
+      <div class="project">
+        <div class="project-head">
+          <h3>Security Awareness Gamification Platform (SAGP)</h3>
+          <span class="badge">Completed</span>
+        </div>
+        <p class="project-role">Capstone Project — Project Lead</p>
+        <p>A Next.js/TypeScript/Supabase/Phaser.js platform that teaches phishing and vishing recognition through play instead of slide decks. Led backend architecture and RBAC across three role-based dashboards (superadmin, org admin, employee), delivered two original games — <em>CyberCarnival</em>, a 19-enemy-type threat hunt with tiered difficulty, and <em>CyberForge</em> — plus a cloud-persisted badge system and a behavioral risk-scoring engine. Deployed on Vercel with a custom domain.</p>
+        <a href="https://sag-pv2.vercel.app" target="_blank" rel="noopener noreferrer" class="project-link">View Live →</a>
+      </div>
+
+      <div class="project">
+        <div class="project-head">
+          <h3>UMPDP — Unified Multi-Modal Phishing Detection Pipeline</h3>
+          <span class="badge">Published</span>
+        </div>
+        <p class="project-role">IEEE ICPCT 2025</p>
+        <p>Combined a DistilBERT email classifier with CatBoost-based URL analysis into a single phishing-detection pipeline, presented at the IEEE International Conference on Power, Control and Technology (ICPCT 2025).</p>
+      </div>
+
+      <div class="project">
+        <div class="project-head">
+          <h3>MCP STDIO Supply-Chain RCE Research</h3>
+          <span class="badge">Completed</span>
+        </div>
+        <p class="project-role">Group Capstone Research</p>
+        <p>Semester-long research project analyzing 2026 MCP STDIO supply-chain RCE vulnerabilities (CVE-2026-30615, CVE-2026-30623): CVSS v4.0 scoring, detection engineering mapped to MITRE ATT&amp;CK/ATLAS, an original Sigma detection rule, STRIDE threat modeling across six trust boundaries in OWASP Threat Dragon, and an original <em>Agent Trust Boundary Compromise Framework (ATBCF)</em>.</p>
+      </div>
+
+      <div class="project">
+        <div class="project-head">
+          <h3>TraceLite</h3>
+          <span class="badge badge-alt">Personal / Open Source</span>
+        </div>
+        <p>An open-source Bitcoin fund-flow tracer, built after losing funds to a scam and wanting the tooling to exist. Deliberately non-attributional — it tracks where funds moved, not who owns the wallets. v1 covers UTXO-model traversal via free block-explorer APIs, depth-limited hops, fan-in/fan-out heuristics, graph visualization, and JSON/PDF reporting.</p>
+      </div>
+
+      <div class="project">
+        <div class="project-head">
+          <h3>Home Lab SOC</h3>
+          <span class="badge badge-alt">Ongoing</span>
+        </div>
+        <p>Repurposed an old laptop into a Proxmox VE host running ELK and Wazuh for detection engineering practice, with Raspberry Pi sensors earmarked for a honeypot/IDS feed — a sandbox for building the muscle memory SOC work actually requires.</p>
+      </div>
+
+      <div class="project">
+        <div class="project-head">
+          <h3>AES Encryption &amp; Decryption Web Application</h3>
+        </div>
+        <p>A full-stack Flask app implementing AES cipher operations by hand: real-time hex evaluation, custom round keys, matrix operations (S-box substitution, permutation), and polynomial arithmetic over GF(2^8) — built to make the cryptography behind CTF crypto challenges concrete.</p>
+        <a href="https://aes-encryption-decryption-9eou.onrender.com" target="_blank" rel="noopener noreferrer" class="project-link">View Live Demo →</a>
+      </div>
+
+      <div class="project">
+        <div class="project-head">
+          <h3>CTF Challenge Resource Hub</h3>
+        </div>
+        <p>A categorized reference of tips, tools, and techniques across cryptography, web exploitation, and forensics challenges, built from my own CTF notes.</p>
+        <a href="CTF.html" class="project-link">View Resource →</a>
+      </div>
+    </section>
+
+    <!-- Credentials Section -->
+    <section id="credentials" class="fade-in">
+      <h2>Education &amp; Credentials</h2>
+      <div class="cred">
+        <h3>Bachelor of Applied Information Sciences — Information Systems Security</h3>
+        <p>Sheridan College · Graduate</p>
+      </div>
+
+      <h3 class="subheading">Academic Highlights</h3>
+      <p class="highlight-intro">A few upper-level courses where I performed strongest — a reasonable signal of where my instincts naturally lean:</p>
+      <div class="grade-grid">
+        <div class="grade-item"><span class="grade-course">Advanced Topics in Cyber Security</span><span class="grade-score">93</span></div>
+        <div class="grade-item"><span class="grade-course">Advanced Forensics</span><span class="grade-score">93</span></div>
+        <div class="grade-item"><span class="grade-course">Information Systems Security Audit</span><span class="grade-score">93</span></div>
+        <div class="grade-item"><span class="grade-course">Penetration Testing</span><span class="grade-score">92</span></div>
+        <div class="grade-item"><span class="grade-course">Database Security</span><span class="grade-score">92</span></div>
+        <div class="grade-item"><span class="grade-course">Reverse Engineering &amp; Exploit Development</span><span class="grade-score">90</span></div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="fade-in">
+      <h2>Let's Connect</h2>
+      <p>Looking for security analyst, blue-team, or security engineering opportunities — and always happy to talk detection engineering or security research.</p>
+      <div class="contact-links">
+        <a href="mailto:pmanav910@proton.me">Email</a>
+        <a href="https://www.linkedin.com/in/manav-dpatel" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/manav1819" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Manav Patel</p>
+  </footer>
 
   <script src="script.js"></script>
 
