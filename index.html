@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Manav Patel — Cybersecurity Professional</title>
-  <meta name="description" content="Cybersecurity graduate from Sheridan College (Information Systems Security), focused on blue team detection engineering, security research, and continuous learning in an ever-evolving field.">
+  <meta name="description" content="Cybersecurity graduate (Honours Bachelor of Information Sciences, Cyber Security — Sheridan College) focused on SOC and blue-team work: a self-hosted Wazuh/ELK detection lab, Sigma and MITRE ATT&CK detection engineering, and 3+ years of data center security operations.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
@@ -15,10 +15,10 @@
   <!-- Top Navigation -->
   <nav class="site-nav">
     <a href="/" class="brand">Manav Patel</a>
-    <button class="nav-toggle" id="menu-toggle" aria-label="Toggle menu">☰</button>
     <ul class="nav-links" id="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#focus">Expertise</a></li>
+      <li><a href="#experience">Experience</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#credentials">Credentials</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -30,12 +30,13 @@
     <div class="hero-content">
       <p class="eyebrow">Cybersecurity Professional</p>
       <h1>Manav Patel</h1>
-      <p class="hero-subtitle">Blue Team &amp; Detection Engineering Focus</p>
-      <p class="hero-body">I'm a Sheridan College graduate in Information Systems Security, with hands-on experience spanning detection engineering, security research, and secure application development. I split my time between real-world security operations and applied research — because cybersecurity is a field that never stops moving, and I don't intend to stop learning it.</p>
+      <p class="hero-subtitle">SOC &amp; Blue Team · Detection Engineering</p>
+      <p class="hero-body">I'm a Sheridan College cybersecurity graduate with 3+ years of physical security operations at a shared, multi-tenant data center — access control, CCTV monitoring, incident escalation, and compliance documentation. At home I run a self-hosted SOC lab on Proxmox with Wazuh and the ELK Stack for detection engineering, and I've authored a Sigma detection rule mapped to MITRE ATT&amp;CK. Offensive work — CTFs and exploit development — keeps my defensive instincts sharp.</p>
       <div class="quick-facts">
-        <span>Bachelor of Applied Information Sciences — Information Systems Security</span>
-        <span>IEEE Published Researcher</span>
-        <span>Capstone Project Lead</span>
+        <span>Honours Bachelor of Information Sciences — Cyber Security</span>
+        <span>3+ Years Data Center Security</span>
+        <span>IEEE ICPCT 2025 Presenter</span>
+        <span>Capstone Technical Lead</span>
       </div>
       <div class="hero-actions">
         <a href="#projects" class="btn btn-primary">View My Work</a>
@@ -48,9 +49,8 @@
     <!-- About Section -->
     <section id="about" class="fade-in">
       <h2>About Me</h2>
-      <p>I hold a Bachelor of Applied Information Sciences in Information Systems Security from Sheridan College, where I led a four-person capstone team through the full delivery of a security-awareness platform — from architecture to production deployment. Alongside my studies, I've worked full-time in physical security at a data center site, which gave me a practical, ground-level understanding of access control, monitoring, and incident response long before I applied it in a SOC context.</p>
-      <p>My work spans both sides of the fence: defensive practices like detection engineering and threat modeling, and offensive fundamentals like exploit development and penetration testing, because understanding how systems are broken is what makes defending them meaningful. Cybersecurity is an ever-evolving field — new vulnerabilities, new frameworks, new attack surfaces — and I treat continuous learning as a core part of the job, not a phase that ends at graduation.</p>
-      <p>My approach is rooted in three principles: <strong>clarity</strong> in communication, <strong>empathy</strong> for the people security exists to protect, and unwavering <strong>integrity</strong> in every engagement.</p>
+      <p>I hold an Honours Bachelor of Information Sciences in Cyber Security from Sheridan College, where I was technical lead on a capstone security-awareness platform — directing backend architecture and access control through to production deployment. Since February 2023 I've worked full-time as a Concierge / Security Officer at a Digital Realty data center in Vaughan, monitoring access control and CCTV for a facility serving four client tenants and routing incidents through ServiceNow. That ground-level experience with access control, monitoring, and escalation is what I now practise on the digital side in my home SOC lab.</p>
+      <p>My work spans both sides of the fence: defensive practices like detection engineering, log analysis, and threat modeling, and offensive fundamentals like exploit development and CTF competitions, because understanding how systems are broken is what makes defending them meaningful. Cybersecurity is an ever-evolving field — new vulnerabilities, new frameworks, new attack surfaces — and I treat continuous learning as a core part of the job, not a phase that ends at graduation.</p>
     </section>
 
     <!-- Focus / Expertise Section -->
@@ -60,40 +60,81 @@
         <div class="focus-card">
           <h3>Blue Team &amp; Detection</h3>
           <div class="tags">
-            <span class="tag">SIEM &amp; log analysis (ELK, Wazuh)</span>
+            <span class="tag">SIEM &amp; log analysis (Wazuh, ELK Stack)</span>
             <span class="tag">Detection engineering &amp; Sigma rules</span>
             <span class="tag">MITRE ATT&amp;CK / ATLAS mapping</span>
-            <span class="tag">STRIDE threat modeling</span>
             <span class="tag">Incident response fundamentals</span>
+            <span class="tag">Forensics (Volatility, GRR, Sysinternals)</span>
+            <span class="tag">STRIDE threat modeling (OWASP Threat Dragon)</span>
+            <span class="tag">CVSS v4.0 scoring</span>
+            <span class="tag">Wireshark &amp; Nmap</span>
           </div>
         </div>
         <div class="focus-card">
           <h3>Offensive Security</h3>
           <div class="tags">
-            <span class="tag">Penetration testing</span>
-            <span class="tag">Exploit development (SEH, ROP, egghunters)</span>
-            <span class="tag">Binary &amp; network forensics</span>
-            <span class="tag">Applied cryptography</span>
+            <span class="tag">Penetration testing (Metasploit, Burp Suite)</span>
+            <span class="tag">Exploit development (SEH overflows, egghunters)</span>
+            <span class="tag">Reverse engineering (Ghidra, GDB, radare2)</span>
+            <span class="tag">Kerberoasting &amp; privilege escalation</span>
+            <span class="tag">Applied cryptography &amp; RSA cryptanalysis</span>
           </div>
         </div>
         <div class="focus-card">
           <h3>Security Engineering &amp; ML</h3>
           <div class="tags">
-            <span class="tag">Python (Flask, scikit-learn, DistilBERT)</span>
-            <span class="tag">Applied ML for security (phishing, malware, anomaly detection)</span>
-            <span class="tag">Cloud &amp; RBAC (Supabase, Next.js, Vercel)</span>
-            <span class="tag">Git / CI workflows</span>
+            <span class="tag">Python (Flask, scikit-learn, DistilBERT, CatBoost)</span>
+            <span class="tag">Applied ML for phishing detection</span>
+            <span class="tag">TypeScript / Next.js</span>
+            <span class="tag">Supabase RBAC &amp; Row-Level Security</span>
+            <span class="tag">SQL, C, Java, R, Bash</span>
           </div>
         </div>
         <div class="focus-card">
           <h3>Infrastructure &amp; Labs</h3>
           <div class="tags">
-            <span class="tag">Proxmox virtualization</span>
+            <span class="tag">Proxmox VE, LXC &amp; VMware</span>
+            <span class="tag">Windows Server &amp; Linux (Kali, Parrot, Ubuntu)</span>
+            <span class="tag">MikroTik RouterOS &amp; network segmentation</span>
+            <span class="tag">Pi-hole + Unbound DNS</span>
+            <span class="tag">Tailscale VPN</span>
+            <span class="tag">Fortinet Suite &amp; GNS3</span>
             <span class="tag">Raspberry Pi sensors</span>
             <span class="tag">Honeypot / IDS builds</span>
-            <span class="tag">Linux administration</span>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="fade-in">
+      <h2>Experience</h2>
+
+      <div class="project">
+        <div class="project-head">
+          <h3>Concierge / Security Officer</h3>
+          <span class="badge">Feb 2023 – Present</span>
+        </div>
+        <p class="project-role">Allied Universal · Digital Realty, Vaughan, ON</p>
+        <p>Monitor access control and CCTV systems for a shared, multi-tenant data center serving four client tenants, escalating anomalies per site protocol. Enforce visitor and vendor compliance — badge issuance and escort logging — and document and route incident reports through ServiceNow.</p>
+      </div>
+
+      <div class="project">
+        <div class="project-head">
+          <h3>User Support Technician</h3>
+          <span class="badge badge-alt">Oct 2020 – Sept 2021</span>
+        </div>
+        <p class="project-role">The CompDoc · Mississauga, ON</p>
+        <p>Resolved network and internet connectivity issues for 200+ users, closing 90% of tickets on first contact, and wrote a troubleshooting guide adopted team-wide.</p>
+      </div>
+
+      <div class="project">
+        <div class="project-head">
+          <h3>Security Supervisor</h3>
+          <span class="badge badge-alt">Oct 2019 – Mar 2020</span>
+        </div>
+        <p class="project-role">Darkcity Security</p>
+        <p>Directed a five-person security team, authored incident reports for management review, and trained incoming officers on site protocol.</p>
       </div>
     </section>
 
@@ -103,21 +144,11 @@
 
       <div class="project">
         <div class="project-head">
-          <h3>Security Awareness Gamification Platform (SAGP)</h3>
-          <span class="badge">Completed</span>
+          <h3>Home Lab SOC</h3>
+          <span class="badge badge-alt">Ongoing</span>
         </div>
-        <p class="project-role">Capstone Project — Project Lead</p>
-        <p>A Next.js/TypeScript/Supabase/Phaser.js platform that teaches phishing and vishing recognition through play instead of slide decks. Led backend architecture and RBAC across three role-based dashboards (superadmin, org admin, employee), delivered two original games — <em>CyberCarnival</em>, a 19-enemy-type threat hunt with tiered difficulty, and <em>CyberForge</em> — plus a cloud-persisted badge system and a behavioral risk-scoring engine. Deployed on Vercel with a custom domain.</p>
-        <a href="https://sag-pv2.vercel.app" target="_blank" rel="noopener noreferrer" class="project-link">View Live →</a>
-      </div>
-
-      <div class="project">
-        <div class="project-head">
-          <h3>UMPDP — Unified Multi-Modal Phishing Detection Pipeline</h3>
-          <span class="badge">Published</span>
-        </div>
-        <p class="project-role">IEEE ICPCT 2025</p>
-        <p>Combined a DistilBERT email classifier with CatBoost-based URL analysis into a single phishing-detection pipeline, presented at the IEEE International Conference on Power, Control and Technology (ICPCT 2025).</p>
+        <p class="project-role">Blue-Team Environment · 2023 – Present</p>
+        <p>A Proxmox VE hypervisor on repurposed hardware (31GB RAM, 500GB SSD, 1TB HDD) hosting LXC containers for isolated detection-engineering practice. Wazuh and the ELK Stack provide centralized log ingestion and alerting across lab hosts and containers. The network is segmented behind a MikroTik router, with Pi-hole and Unbound as a recursive DNS resolver and Tailscale for encrypted remote access, and Raspberry Pi sensors are earmarked for a honeypot/IDS feed — a sandbox for building the muscle memory SOC work actually requires.</p>
       </div>
 
       <div class="project">
@@ -125,8 +156,27 @@
           <h3>MCP STDIO Supply-Chain RCE Research</h3>
           <span class="badge">Completed</span>
         </div>
-        <p class="project-role">Group Capstone Research</p>
-        <p>Semester-long research project analyzing 2026 MCP STDIO supply-chain RCE vulnerabilities (CVE-2026-30615, CVE-2026-30623): CVSS v4.0 scoring, detection engineering mapped to MITRE ATT&amp;CK/ATLAS, an original Sigma detection rule, STRIDE threat modeling across six trust boundaries in OWASP Threat Dragon, and an original <em>Agent Trust Boundary Compromise Framework (ATBCF)</em>.</p>
+        <p class="project-role">Group Project · 2026</p>
+        <p>Co-authored a 15-page technical report on two remote code execution vulnerabilities in the MCP STDIO transport (CVE-2026-30615, CVE-2026-30623): CVSS v4.0 severity scoring, STRIDE threat modeling across six trust boundaries in OWASP Threat Dragon, detections mapped to MITRE ATT&amp;CK and ATLAS, an original Sigma detection rule, and a co-developed threat-classification framework for agent-based system compromise, the <em>Agent Trust Boundary Compromise Framework (ATBCF)</em>.</p>
+      </div>
+
+      <div class="project">
+        <div class="project-head">
+          <h3>Security Awareness Gamification Platform (SAGP)</h3>
+          <span class="badge">Completed</span>
+        </div>
+        <p class="project-role">Capstone Project — Technical Lead · 2025 – 2026</p>
+        <p>A Next.js/TypeScript/Supabase/Phaser.js platform that teaches phishing and vishing recognition through play instead of slide decks. I directed backend architecture and access control, implementing JWT-based RBAC across superadmin, org-admin, and employee dashboards for a multi-tenant environment, and resolved a recursive Row-Level Security policy loop with a <code>SECURITY DEFINER</code> Postgres function — restoring dashboard access without weakening tenant isolation. The games include <em>CyberCarnival</em>, a phishing threat hunt with 19 enemy types across three difficulty tiers, <em>CyberForge</em>, and a vishing simulation, backed by a cloud-persisted badge system and a behavioral risk-scoring engine. Deployed on Vercel with Google SSO and a custom domain.</p>
+        <a href="https://sag-pv2.vercel.app" target="_blank" rel="noopener noreferrer" class="project-link">View Live →</a>
+      </div>
+
+      <div class="project">
+        <div class="project-head">
+          <h3>UMPDP — Unified Multi-Modal Phishing Detection Pipeline</h3>
+          <span class="badge">Presented</span>
+        </div>
+        <p class="project-role">IEEE ICPCT 2025</p>
+        <p>Co-developed a two-stage phishing detection pipeline combining a DistilBERT email-text classifier with a CatBoost URL-analysis model, presented at IEEE ICPCT 2025.</p>
       </div>
 
       <div class="project">
@@ -134,15 +184,16 @@
           <h3>TraceLite</h3>
           <span class="badge badge-alt">Personal / Open Source</span>
         </div>
-        <p>An open-source Bitcoin fund-flow tracer, built after losing funds to a scam and wanting the tooling to exist. Deliberately non-attributional — it tracks where funds moved, not who owns the wallets. v1 covers UTXO-model traversal via free block-explorer APIs, depth-limited hops, fan-in/fan-out heuristics, graph visualization, and JSON/PDF reporting.</p>
+        <p>An open-source Bitcoin fund-flow tracer, built after losing funds to a scam and wanting the tooling to exist for other small-scale scam victims. Deliberately non-attributional — it tracks where funds moved, not who owns the wallets. Written in Python with NetworkX, it performs depth-limited traversal (3, 5, or 10 hops) against the Blockstream and Mempool.space APIs, applying fan-in/fan-out and rapid-forwarding heuristics so victims can visualize where stolen funds went.</p>
       </div>
 
       <div class="project">
         <div class="project-head">
-          <h3>Home Lab SOC</h3>
+          <h3>Capture-the-Flag &amp; Exploit Development</h3>
           <span class="badge badge-alt">Ongoing</span>
         </div>
-        <p>Repurposed an old laptop into a Proxmox VE host running ELK and Wazuh for detection engineering practice, with Raspberry Pi sensors earmarked for a honeypot/IDS feed — a sandbox for building the muscle memory SOC work actually requires.</p>
+        <p class="project-role">2025 – Present</p>
+        <p>CTF challenges spanning RSA cryptanalysis (Wiener's attack, weak prime generation), Vigenère and AES-CBC cryptography, SEH buffer overflow exploitation, egghunter shellcode, OSINT, and radare2 reverse engineering, including competing at FantasyCTF. Hands-on practice with Kerberoasting, Meterpreter post-exploitation, Linux privilege escalation, and the EternalBlue (MS17-010) exploit chain in CPENT-aligned labs.</p>
       </div>
 
       <div class="project">
@@ -152,22 +203,23 @@
         <p>A full-stack Flask app implementing AES cipher operations by hand: real-time hex evaluation, custom round keys, matrix operations (S-box substitution, permutation), and polynomial arithmetic over GF(2^8) — built to make the cryptography behind CTF crypto challenges concrete.</p>
         <a href="https://aes-encryption-decryption-9eou.onrender.com" target="_blank" rel="noopener noreferrer" class="project-link">View Live Demo →</a>
       </div>
-
-      <div class="project">
-        <div class="project-head">
-          <h3>CTF Challenge Resource Hub</h3>
-        </div>
-        <p>A categorized reference of tips, tools, and techniques across cryptography, web exploitation, and forensics challenges, built from my own CTF notes.</p>
-        <a href="CTF.html" class="project-link">View Resource →</a>
-      </div>
     </section>
 
     <!-- Credentials Section -->
     <section id="credentials" class="fade-in">
       <h2>Education &amp; Credentials</h2>
       <div class="cred">
-        <h3>Bachelor of Applied Information Sciences — Information Systems Security</h3>
-        <p>Sheridan College · Graduate</p>
+        <h3>Honours Bachelor of Information Sciences — Cyber Security</h3>
+        <p>Sheridan College · Oakville, ON · Graduated with Honours, Aug 2026</p>
+      </div>
+      <div class="cred">
+        <h3>Ontario College Diploma — Computer Engineering Technician</h3>
+        <p>Sheridan College · Aug 2019</p>
+      </div>
+
+      <h3 class="subheading">Certifications</h3>
+      <div class="cred">
+        <p>Google Data Analytics Professional Certificate — Google (via Coursera) · Apr 2025</p>
       </div>
 
       <h3 class="subheading">Academic Highlights</h3>
@@ -185,9 +237,9 @@
     <!-- Contact Section -->
     <section id="contact" class="fade-in">
       <h2>Let's Connect</h2>
-      <p>Looking for security analyst, blue-team, or security engineering opportunities — and always happy to talk detection engineering or security research.</p>
+      <p>Looking for SOC analyst, blue-team, or security engineering opportunities — and always happy to talk detection engineering or security research.</p>
       <div class="contact-links">
-        <a href="mailto:pmanav910@proton.me">Email</a>
+        <a href="mailto:manav.dbpatel@gmail.com">Email</a>
         <a href="https://www.linkedin.com/in/manav-dpatel" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a href="https://github.com/manav1819" target="_blank" rel="noopener noreferrer">GitHub</a>
       </div>

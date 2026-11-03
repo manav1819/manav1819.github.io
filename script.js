@@ -4,16 +4,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     e.preventDefault();
     const target = document.querySelector(this.getAttribute('href'));
     if (target) {
-      const offsetTop = target.getBoundingClientRect().top + window.pageYOffset - 80;
+      const nav = document.querySelector('.site-nav');
+      const navHeight = nav ? nav.offsetHeight + 16 : 80;
+      const offsetTop = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
       window.scrollTo({
         top: offsetTop,
         behavior: 'smooth'
       });
-    }
-    // Close mobile menu after a link is clicked
-    const navLinks = document.getElementById('nav-links');
-    if (navLinks) {
-      navLinks.classList.remove('show');
     }
   });
 });
@@ -35,12 +32,3 @@ const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll
 faders.forEach(fader => {
   appearOnScroll.observe(fader);
 });
-
-// Responsive menu toggle
-const menuToggle = document.getElementById('menu-toggle');
-const navLinks = document.getElementById('nav-links');
-if (menuToggle && navLinks) {
-  menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-  });
-}
